@@ -1,0 +1,30 @@
+thesis_ordering/evaluator.py
+  s_d5f2c125658ea4::t_db6e57982d2673 52-53
+  s_d5f2c125658ea4::t_864ca405f8feb8 70-71
+  s_d5f2c125658ea4::t_aeb28a1027c68d 17
+thesis_ordering/benchmark.py
+  s_d5f2c125658ea4::t_4c2fe4f6adfc58 63,71,74
+README.md
+  s_d5f2c125658ea4::t_2a06354266f92d 163-165
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "4b6ee005fd85bf141c3414d9297825cb1a11541e",
+  "prompts": {},
+  "humans": {
+    "h_2a3262ee02a52d": {
+      "author": "bonsainoodle <3sprix.exe@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_d5f2c125658ea4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dccb9da6-8012-4406-b407-f7068261a9bb",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "bonsainoodle <3sprix.exe@gmail.com>"
+    }
+  }
+}
