@@ -1,0 +1,21 @@
+README.md
+  s_2ec87e69438e0b::t_8f89f7cd2dbad4 6-7
+  s_2ec87e69438e0b::t_f31aa63a18b5e3 99
+  s_2ec87e69438e0b::t_5d63c1abb2a25c 194-207,211
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "60f633ce1543bc96b4cb9b4fd3a6db18ade8768e",
+  "prompts": {},
+  "sessions": {
+    "s_2ec87e69438e0b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4fdbb98e-04ab-41b1-b1df-534ace228eb7",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "bonsainoodle <3sprix.exe@gmail.com>"
+    }
+  }
+}
