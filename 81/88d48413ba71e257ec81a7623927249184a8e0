@@ -1,0 +1,14 @@
+.gitignore
+  h_2a3262ee02a52d 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "8188d48413ba71e257ec81a7623927249184a8e0",
+  "prompts": {},
+  "humans": {
+    "h_2a3262ee02a52d": {
+      "author": "bonsainoodle <3sprix.exe@gmail.com>"
+    }
+  }
+}
