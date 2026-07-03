@@ -3,7 +3,8 @@
 Welcome, and thanks for taking the time. This exercise is drawn from a real
 problem in our product. It is deliberately open-ended: **we care more about how
 you think about the problem than about how many lines you write.** A strong
-submission can be a few hundred lines plus a clear write-up.
+submission can be a few hundred lines — we'll dig into your reasoning together in
+a follow-up call.
 
 Budget roughly **2-3 focused hours**. If you find yourself going deeper because it's fun, great — but tell us where you stopped and what you'd do next rather than grinding to exhaustion.
 
@@ -95,7 +96,7 @@ minimises the **expected cost** of reaching the verdict, exploiting early exit
 and the tree structure.
 
 We want to see you reason about *what "optimal" even means* here and how close
-you can get. Some questions worth answering in your write-up:
+you can get. Some questions worth thinking through (we'll discuss them in the call):
 
 - For a **single** `AND` block of independent criteria, is there a simple rule
 that orders them optimally? Can you argue *why* it's optimal?
@@ -190,21 +191,24 @@ benchmark shows `+0.0%`. Your job is to make that number go up.
 
 ## 5. Deliverables
 
-1. **Code** — your strategy (and any helpers/tests you add). It must run with
-  the commands above; the match rate in the benchmark must stay identical to
-   the baseline (a strategy that changes verdicts is simply wrong).
-2. `DESIGN.md` (~1-2 pages) — the important part. Cover:
-  - Your approach for each track and *why*.
-  - Your answer to "what does optimal mean here" and how close you get.
-  - Any optimality / regret / competitive argument you can make, at whatever
-  level of rigour you can support (a precise informal argument beats
-  hand-waving; a proof sketch is welcome, not required).
-  - Assumptions you made and what you'd do with more time.
-  - Your benchmark numbers.
+**Code** — your strategy (and any helpers/tests you add). It must run with the
+commands above; the match rate in the benchmark must stay identical to the
+baseline (a strategy that changes verdicts is simply wrong).
+
+We'll walk through the rest live: in a follow-up call you'll present your code
+and reason through your decisions with us. Come ready to talk about:
+
+- Your approach for each track and *why*.
+- Your answer to "what does optimal mean here" and how close you get.
+- Any optimality / regret / competitive argument you can make, at whatever level
+  of rigour you can support (a precise informal argument beats hand-waving; a
+  proof sketch is welcome, not required).
+- Assumptions you made and what you'd do with more time.
+- Your benchmark numbers.
 
 Keep it honest: tell us what you're unsure about. "I think this is optimal for
 single blocks but I couldn't prove the nested case, here's my intuition" is a
-great sentence to write.
+great thing to say.
 
 ---
 
