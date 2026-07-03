@@ -135,7 +135,6 @@ independent?
 - We often evaluate criteria in **parallel batches** (fire *k* LLM calls at
 once) to cut latency. How does batching interact with early exit, and how
 would you choose batch composition?
-- `NOT` nodes / arbitrary monotone formulas; criteria shared across subtrees.
 
 ---
 
@@ -161,8 +160,9 @@ logic — read it first.
 - `relevant_unknown(root, known)` gives you the criteria still worth
 evaluating (unrevealed *and* able to change the verdict). You should never
 evaluate anything outside this set.
-- The harness raises if you ask for an already-evaluated or irrelevant-by-id
-criterion, so bugs surface loudly.
+- The harness raises if you ask for a criterion that doesn't exist, was already
+evaluated, or is no longer relevant (i.e. outside `relevant_unknown`), so bugs
+surface loudly.
 
 You implement `CandidateStrategy` in `candidate.py`. Everything else is yours to
 read but you shouldn't need to change it (if you do, explain why).

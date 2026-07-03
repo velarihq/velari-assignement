@@ -14,7 +14,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from .model import Thesis, criteria_by_id, evaluate_partial
-from .strategy import Strategy
+from .strategy import Strategy, relevant_unknown
 
 
 @dataclass
@@ -49,8 +49,8 @@ def run_thesis(thesis: Thesis, outcomes: dict[str, bool], strategy: Strategy) ->
         A ``Trace`` of the evaluation.
 
     Raises:
-        ValueError: If the strategy asks for an unknown or already-evaluated
-            criterion.
+        ValueError: If the strategy asks for a criterion that is unknown,
+            already evaluated, or no longer relevant to the verdict.
     """
     by_id = criteria_by_id(thesis)
     known: dict[str, bool] = {}
@@ -67,6 +67,8 @@ def run_thesis(thesis: Thesis, outcomes: dict[str, bool], strategy: Strategy) ->
             raise ValueError(f"strategy asked for unknown criterion {cid!r}")
         if cid in known:
             raise ValueError(f"strategy re-asked criterion {cid!r}")
+        if cid not in {c.id for c in relevant_unknown(thesis.root, known)}:
+            raise ValueError(f"strategy asked for irrelevant criterion {cid!r}")
 
         known[cid] = outcomes[cid]
         evaluated.append(cid)

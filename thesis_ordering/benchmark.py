@@ -60,7 +60,7 @@ def evaluate_strategy(
 
 def main() -> None:
     """Print a comparison table of baseline vs candidate across all theses."""
-    header = f"{'thesis':<40}{'strategy':<14}{'avg_cost':>10}{'avg_evals':>11}{'match_rate':>12}"
+    header = f"{'thesis':<44}{'strategy':<14}{'avg_cost':>10}{'avg_evals':>11}{'match_rate':>12}"
     print(header)
     print("-" * len(header))
 
@@ -68,10 +68,10 @@ def main() -> None:
         base_cost, base_evals, base_match = evaluate_strategy(DeclarationOrderStrategy, thesis)
         cand_cost, cand_evals, cand_match = evaluate_strategy(CandidateStrategy, thesis)
 
-        print(f"{thesis.name:<40}{'baseline':<14}{base_cost:>10.3f}{base_evals:>11.3f}{base_match:>12.3f}")
+        print(f"{thesis.name:<44}{'baseline':<14}{base_cost:>10.3f}{base_evals:>11.3f}{base_match:>12.3f}")
         savings = 100.0 * (1.0 - cand_cost / base_cost) if base_cost else 0.0
         print(
-            f"{'':<40}{'candidate':<14}{cand_cost:>10.3f}{cand_evals:>11.3f}{cand_match:>12.3f}"
+            f"{'':<44}{'candidate':<14}{cand_cost:>10.3f}{cand_evals:>11.3f}{cand_match:>12.3f}"
             f"   ({savings:+.1f}% cost vs baseline)"
         )
         print()
